@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "h h h"
+    "n n n"
+    "a a s"
+    "f f f";
+}
+
+header {
+    grid-area: h;
+    padding: 10px 0;
+}
+
+header h1 {
+    color: #008768;
+    font-size: 2.3em;
+    font-weight: 600;
+}
+
+nav {
+    grid-area: n;
+    background-color: #008768;
+    padding: 2px 20px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 15px;
+}
+
+nav ul li a {
+    color: #7CC9B4;
+    text-decoration: none;
+
+}
+
+article {
+    grid-area: a;
+    padding: 15px;
+}
+
+article#main-page {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content;
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-container {
+    border: 1px solid #DFDFDD;
+    border-radius: 5px;
+}
+
+.image-container h2 {
+    border-bottom: 1px solid #DFDFDD;
+    padding: 15px;
+    background-color: #F7F7F4;
+    color:#008768;
+    font-weight: 500;
+    font-size: 1.4em;
+    border-radius: 5px;
+}
+
+.image-container img {
+    max-width: 100%;
+    width: 300px;
+    margin: 15px 15px 5px 15px;
+    padding: 5px;
+    border: 1px solid #DFDFDD;
+    border-radius: 5px;
+}
+
+.image-container p {
+    margin: 0 15px 15px 15px;
+    width: 300px;
+    text-align: justify;
+}
+
+
+
+#evautoi-page table, #evautoi-page table * {
+    border-collapse: collapse;
+}
+
+#evautoi-page table {
+    width: 100%;
+}
+
+#evautoi-page thead {
+    border-bottom: 3px solid black;
+    text-align: left;
+}
+
+#evautoi-page thead th {
+    height: 38px; 
+}
+
+#evautoi-page tbody td {
+    border-bottom: 1px solid #DDE2E4;
+    height: 38px;
+}
+
+#evautoi-page tbody tr:nth-child(odd) {
+    background-color: #F2F2F0;
+}
+
+#erdekessegek-page ol {
+    padding: 15px;
+}
+
+#erdekessegek-page ol li {
+    margin-bottom: 15px;
+}
+
+
+
+aside {
+    grid-area: s;
+    display: grid;
+    justify-content: center;
+    padding: 15px;
+}
+
+aside img {
+    max-width: 100%;
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #DFDFDD;
+    border-radius: 5px;
+}
+
+footer {
+    grid-area: f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #008768;
+}
